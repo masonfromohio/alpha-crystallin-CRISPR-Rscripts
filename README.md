@@ -1,2 +1,3 @@
 # alpha-crystallin-CRISPR-Rscripts
 R scripts used in our alpha crystallin CRISPR knockout study
+There are scripts for figures 4-7
