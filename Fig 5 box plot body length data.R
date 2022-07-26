@@ -13,7 +13,7 @@ Lens_size <- read_excel("Fig 5 lens diameter and body size data.xlsx")
 #There are three blocks of script below for body length, lens diameter and ratio of the two
 
 #This block makes plots of body length 
-Lens_size <- Lens_size %>% filter(age == 4)
+Lens_size <- Lens_size %>% filter(age == 3)
 size_plot<-ggplot(Lens_size, aes(x=gene, y=body)) +
   geom_boxplot(outlier.shape=NA)+
   geom_jitter(width=0.075, color="grey")+
@@ -30,10 +30,10 @@ size_plot<-ggplot(Lens_size, aes(x=gene, y=body)) +
         panel.grid.minor.y = element_blank())+
     scale_x_discrete(limits=c("Wildtype_1", "Wildtype_2", "cryaa", "cryaba", "cryabb"), 
                    breaks=c("Wildtype_1", "Wildtype_2", "cryaa", "cryaba", "cryabb"),
-                   labels=c("wildtype 1", "wildtype 2", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
+                   labels=c("wild type 1", "wild type 2", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
 size_plot
 
-size_plot+ggsave("4dpf body.tiff", width = 6, height = 3.5, units = "in", dpi = 300)
+size_plot+ggsave("3dpf body.tiff", width = 6, height = 3.5, units = "in", dpi = 300)
 
 #Run Statistics with Tukey Honest Significant Difference (HSD) post test adjusted p-values for body length
 Stat_test <- lm(body ~ gene,
@@ -61,10 +61,10 @@ size_plot<-ggplot(Lens_size, aes(x=gene, y=lens)) +
         panel.grid.minor.y = element_blank())+
   scale_x_discrete(limits=c("Wildtype_1", "Wildtype_2", "cryaa", "cryaba", "cryabb"), 
                    breaks=c("Wildtype_1", "Wildtype_2", "cryaa", "cryaba", "cryabb"),
-                   labels=c("wildtype 1", "wildtype 2", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
+                   labels=c("wild type 1", "wild type 2", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
 size_plot
 
-size_plot+ggsave("4dpf lens.jpg", width = 6, height = 3.5, units = "in", dpi = 300)
+size_plot+ggsave("3dpf lens.jpg", width = 6, height = 3.5, units = "in", dpi = 300)
 
 #Run Statistics with Tukey Honest Significant Difference (HSD) post test adjusted p-values
 Stat_test <- lm(lens ~ gene,
@@ -92,7 +92,7 @@ size_plot<-ggplot(Lens_size, aes(x=gene, y=ratio)) +
         panel.grid.minor.y = element_blank())+
   scale_x_discrete(limits=c("Wildtype_1", "Wildtype_2", "cryaa", "cryaba", "cryabb"), 
                    breaks=c("Wildtype_1", "Wildtype_2", "cryaa", "cryaba", "cryabb"),
-                   labels=c("wildtype 1", "wildtype 2", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
+                   labels=c("wild type 1", "wild type 2", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
 size_plot
 
 size_plot+ggsave("3dpf ratio.tiff", width = 6, height = 3.5, units = "in", dpi = 300)
