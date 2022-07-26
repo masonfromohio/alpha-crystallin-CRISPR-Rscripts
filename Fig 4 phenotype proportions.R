@@ -24,7 +24,7 @@ ggplot(rough, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   scale_fill_manual(values=c("grey", "white"))+
   scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
                              breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
-                             labels=c("Wildtype", "cryaa-/-", "pgRNA", "cryaba-/-", "cryabb-/-"))+
+                             labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
         axis.title.y  = element_text(face="bold", size=18),
@@ -47,7 +47,7 @@ ggplot(pits, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   scale_fill_manual(values=c("grey", "white"))+
   scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
                    breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "pgRNA", "cryaba-/-", "cryabb-/-"))+
+                   labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
         axis.title.y  = element_text(face="bold", size=18),
@@ -70,7 +70,7 @@ ggplot(peripheral, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   scale_fill_manual(values=c("grey", "white"))+
   scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
                    breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "pgRNA", "cryaba-/-", "cryabb-/-"))+
+                   labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
         axis.title.y  = element_text(face="bold", size=18),
@@ -93,7 +93,7 @@ ggplot(disorganized, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   scale_fill_manual(values=c("grey", "white"))+
   scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
                    breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "pgRNA", "cryaba-/-", "cryabb-/-"))+
+                   labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
         axis.title.y  = element_text(face="bold", size=18),
@@ -116,7 +116,7 @@ ggplot(severe, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   scale_fill_manual(values=c("grey", "white"))+
   scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
                    breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "pgRNA", "cryaba-/-", "cryabb-/-"))+
+                   labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
         axis.title.y  = element_text(face="bold", size=18),
@@ -139,7 +139,7 @@ ggplot(any, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   scale_fill_manual(values=c("grey", "white"))+
   scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
                    breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "pgRNA", "cryaba-/-", "cryabb-/-"))+
+                   labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
         axis.title.y  = element_text(face="bold", size=18),
