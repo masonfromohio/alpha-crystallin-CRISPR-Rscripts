@@ -32,7 +32,7 @@ ggplot(cryaa, aes(x=Sample, y=Delta_Ct)) +
         panel.grid.minor.y = element_blank())+
         scale_x_discrete(limits=c("Wildtype", "cryaa", "cryaba", "cryabb"), 
                    breaks=c("Wildtype", "cryaa", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
+                   labels=c("wild type", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
 
 ggsave("cryaa qpcr plot.jpg", width = 6, height = 3, units = "in", dpi = 300)
 
@@ -53,7 +53,7 @@ ggplot(cryaba, aes(x=Sample, y=Delta_Ct)) +
         panel.grid.minor.y = element_blank())+
         scale_x_discrete(limits=c("Wildtype", "cryaa", "cryaba", "cryabb"), 
                    breaks=c("Wildtype", "cryaa", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
+                   labels=c("wild type", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
 
 ggsave("cryaba qpcr plot.jpg", width = 6, height = 3, units = "in", dpi = 300)
 
@@ -74,7 +74,7 @@ ggplot(cryabb, aes(x=Sample, y=Delta_Ct)) +
         panel.grid.minor.y = element_blank())+
         scale_x_discrete(limits=c("Wildtype", "cryaa", "cryaba", "cryabb"), 
                    breaks=c("Wildtype", "cryaa", "cryaba", "cryabb"),
-                   labels=c("Wildtype", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
+                   labels=c("wild type", "cryaa-/-", "cryaba-/-", "cryabb-/-"))
 
 ggsave("cryabb qpcr plot.jpg", width = 6, height = 3, units = "in", dpi = 300)
 
