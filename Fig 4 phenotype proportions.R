@@ -9,10 +9,10 @@ library(readxl)
 lens_defects <- read_excel("Fig 4 Proportion data.xlsx")
 
 #Filter defects into separate data sets
-rough<-filter(lens_defects, Defect == "Rough")
-pits<-filter(lens_defects, Defect == "Pits")
+rough<-filter(lens_defects, Defect == "Roughness")
+pits<-filter(lens_defects, Defect == "Pitting")
 peripheral<-filter(lens_defects, Defect == "Peripheral")
-disorganized<-filter(lens_defects, Defect == "Disorganized")
+disorganized<-filter(lens_defects, Defect == "Disorganization")
 severe<-filter(lens_defects, Defect == "Severe")
 any<-filter(lens_defects, Defect == "Any")
 
@@ -22,8 +22,8 @@ ggplot(rough, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   labs(x=NULL, y=NULL)+
   ylim(0,50)+
   scale_fill_manual(values=c("grey", "white"))+
-  scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
-                             breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
+  scale_x_discrete(limits=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"), 
+                             breaks=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"),
                              labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
@@ -45,8 +45,8 @@ ggplot(pits, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   labs(x=NULL, y=NULL)+
   ylim(0,50)+
   scale_fill_manual(values=c("grey", "white"))+
-  scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
-                   breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
+  scale_x_discrete(limits=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"), 
+                   breaks=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"),
                    labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
@@ -68,8 +68,8 @@ ggplot(peripheral, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   labs(x=NULL, y=NULL)+
   ylim(0,50)+
   scale_fill_manual(values=c("grey", "white"))+
-  scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
-                   breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
+  scale_x_discrete(limits=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"), 
+                   breaks=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"),
                    labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
@@ -91,8 +91,8 @@ ggplot(disorganized, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   labs(x=NULL, y=NULL)+
   ylim(0,50)+
   scale_fill_manual(values=c("grey", "white"))+
-  scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
-                   breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
+  scale_x_discrete(limits=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"), 
+                   breaks=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"),
                    labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
@@ -114,8 +114,8 @@ ggplot(severe, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   labs(x=NULL, y=NULL)+
   ylim(0,50)+
   scale_fill_manual(values=c("grey", "white"))+
-  scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
-                   breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
+  scale_x_discrete(limits=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"), 
+                   breaks=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"),
                    labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
@@ -137,8 +137,8 @@ ggplot(any, aes(x = Genotype, y = Proportion, fill= factor (Age)))+
   labs(x=NULL, y=NULL)+
   ylim(0,80)+
   scale_fill_manual(values=c("grey", "white"))+
-  scale_x_discrete(limits=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"), 
-                   breaks=c("wildtype", "cryaa", "pgRNA", "cryaba", "cryabb"),
+  scale_x_discrete(limits=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"), 
+                   breaks=c("wildtype", "cryaa", "crispant", "cryaba", "cryabb"),
                    labels=c("wild type", "cryaa-/-", "crispant", "cryaba-/-", "cryabb-/-"))+
   theme_bw()+
   theme(axis.title.x = element_text(face="bold", size=18),
